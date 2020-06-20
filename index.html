@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 
+    * Modern JavaScript Dashboard
+    * Sample themable JavaScript dashboard template that employs modern ES6, Bootstrap 4 and CSS grid.
+    * @author SimpleNotSimpler
+    * @version 1.0.0
+    * @license MIT
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- css for modern-table library -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/simplenotsimpler/modern-table@1.0.6/src/modern-table.css">
+
+    <!-- site css -->
+    <link rel="stylesheet" href="src/css/style.css">
+
+    <title>Modern JavaScript Dashboard</title>
+
+</head>
+
+<body class="body-grid-container">
+    <header class="header-container p-0">
+        <!-- source:
+             https://stackoverflow.com/questions/59067406/bootstrap-navbar-with-desired-width-and-centralized
+        -->
+
+        <nav class="navbar navbar-expand-md">
+            <div class="d-flex flex-grow-1 nav-div">
+                <a href="/" class="navbar-brand py-0">
+                    <img src="src/img/mlogo_pink.png" width="40px" height="40px" alt="" aria-hidden="true">
+                    <span class="sr-only">Dashboard</span>
+                </a>
+
+                <form class="form-inline" id="search-form">
+                    <div class="input-group">
+                        <input type="search" class="form-control" placeholder="Enter search text" aria-label="Enter search text">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary mx-1" type="submit" aria-label="Search" title="Search">
+                                <i class="fas fa-search" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <button class="navbar-toggler order-0 ml-2" type="button" data-toggle="collapse" data-target="#topnavDropdown">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="navbar-collapse collapse flex-shrink-1 flex-grow-0 order-last " id="topnavDropdown">
+                <ul class="navbar-nav">
+                    <!-- 
+                        added pr-3 to dropdown nav-items to fix overflow bug it caused 
+                        solution from:  
+                        https://stackoverflow.com/questions/48485889/bootstrap-4-nav-dropdown-menu-overflows-the-window
+                    -->
+                    <li class="nav-item dropdown pr-3">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                            <i class="fas fa-w fa-user"></i>
+                            <span class="sr-only">User</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">Hello, Name</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" class="dropdown-item">
+                                <i class="fas fa-w fa-user-circle"></i> Profile
+                            </a>
+
+                            <a href="#" class="dropdown-item">
+                                <i class="fas fa-w fa-cog"></i> Settings
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-w fa-sign-in-alt"></i> Logout
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <nav class="sidenav-container collapse show text-align-center px-2" id="sidenav">
+        <ul class="nav navbar-nav flex-column sticky-top">
+            <li class="nav-item sidenav-brand">
+                <a class="nav-link sidenav-brand-link" href="#">
+                    <div class="sidenav-brand-link-text"><i class="fas fa-funnel-dollar"></i> Sales</div>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-fw fa-sidenav fa-tachometer-alt"></i>
+                    <div class="sidenav-link-text">Dashboard</div>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-fw fa-sidenav fa-chart-area "></i>
+                    <div class="sidenav-link-text">Analytics</div>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-fw fa-sidenav fa-download"></i>
+                    <div class="sidenav-link-text">Export</div>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-fw fa-sidenav fa-folder-open"></i>
+                    <div class="sidenav-link-text">Reports</div>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-fw fa-sidenav fa-link"></i>
+                    <div class="sidenav-link-text">Link</div>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-fw fa-sidenav fa-link"></i>
+                    <div class="sidenav-link-text">Link</div>
+                </a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">
+                    <i class="fas fa-fw fa-sidenav fa-link"></i>
+                    <div class="sidenav-link-text">Link</div>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="main-container container-fluid pt-1 px-2 m-0">
+
+        <!-- card decks code from: https://www.codeply.com/go/nIB6oSbv6q -->
+        <div class="card-deck m-0 p-0">
+            <div class="card my-1 card-area-chart">
+                <div class="card-body p-1">
+                    <!-- <div id="area-chart"></div> -->
+                    <figure id="area-chart" aria-label="Area Chart: Monthly Recurring Revenue (USD)" tabindex="0"></figure>
+
+                </div>
+            </div>
+            <div class="card my-1 card-bar-chart">
+                <div class="card-body p-1">
+                    <figure id="bar-chart" aria-label="Bar Chart: Quarterly Sales (USD) By Region" tabindex="0"></figure>
+                </div>
+            </div>
+
+            <div class="card my-1 card-pie-chart">
+                <div class="card-body p-1">
+                    <figure id="pie-chart" aria-label="Pie Chart: Monthly Sales by Category" tabindex="0"></figure>
+                </div>
+            </div>
+        </div>
+
+        <div class="card p-1 m-1 card-datatable card-body">
+            <div id="table-container" class="table-responsive px-2"></div>
+        </div>
+    </main>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment.min.js"
+        integrity="sha256-5oApc/wMda1ntIEK4qoWJ4YItnV4fBHMwywunj8gPqc=" crossorigin="anonymous"></script>
+
+    <!-- CDN for Apex Charts -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <!-- CDN for format-intl-number library -->
+    <script src="https://cdn.jsdelivr.net/gh/simplenotsimpler/format-intl-number@1.0.0/format-intl-number.js"></script>
+
+    <!-- CDN for modern-table library -->
+    <script src="https://cdn.jsdelivr.net/gh/simplenotsimpler/modern-table@1.0.6/src/modern-table.js"></script>
+
+    <!-- globals for charts -->
+    <script src="src/js/chart-demo/chart-global.js"></script>
+
+    <!-- demo charts -->
+    <script src="src/js/chart-demo/chart-area-demo.js"></script>
+    <script src="src/js/chart-demo/chart-bar-demo.js"></script>
+    <script src="src/js/chart-demo/chart-pie-demo.js"></script>
+
+    <!-- demo modern-table integration -->
+    <script src="src/js/modern-table-demo.js"></script>
+
+</body>
+
+</html>

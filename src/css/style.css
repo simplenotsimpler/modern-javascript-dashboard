@@ -1,0 +1,312 @@
+/**
+ * Stylesheet for:
+ * Modern JavaScript Dashboard
+ * Sample themable JavaScript dashboard template that employs modern ES6, Bootstrap 4 and CSS grid.
+ * @author SimpleNotSimpler
+ * @version 1.0.0
+ * @license MIT
+ *  
+ * Note:
+ * Important overrides needed for overriding Bootstrap styles via vanilla css rather than scss compiling. 
+ *                                                                                               
+ */
+
+
+ /**
+ * =============================================
+ * =            GLOBAL STYLES / SETTINGS       =
+ * =============================================
+ *
+ */
+ 
+* {
+    box-sizing: border-box;
+}
+
+:root{
+    
+    /* Theme: 
+        Microsoft Power BI Color Blind Friendly
+        https://community.powerbi.com/t5/Themes-Gallery/Color-Blind-Friendly/td-p/140597
+    */
+    /* Used decimal colors so can easily re-use in rgba when needed. rgb used otherwise. */
+    --color-primary: 0, 146, 146; /* #009292 */
+    --color-primary-dark: 7, 70, 80; /* #074650 */
+    --color-accent: 254, 109, 182; /* #FE6DB6 */
+    --color-accent-light: 254, 181, 218; /* #FEB5DA */
+    --color-neutral-dark: 0, 0, 0; /* black */
+    --color-neutral-light: 255, 255, 255; /* white */
+
+    --shadow-neutral-dark-50: 0.5rem 0.5rem 0.5rem rgba(var(--color-neutral-dark), 0.5);
+    --shadow-top-neutral-dark-50: 0rem 0.5rem 0.5rem rgba(var(--color-neutral-dark), 0.5);
+    --shadow-neutral-dark-25: 0.5rem 0.5rem 0.5rem rgba(var(--color-neutral-dark), 0.25);
+    
+    --focus-shadow-accent-light-50: 0rem 0rem 0.5rem rgba(var(--color-accent-light), 0.50);
+    --focus-shadow-accent-50: 0rem 0rem 1rem rgba(var(--color-accent), 0.50);
+    --focus-shadow-accent-75: 0rem 0rem 1rem rgba(var(--color-accent), 0.75);
+    --focus-shadow-accent-100: 0rem 0rem 1rem rgba(var(--color-accent), 1.0);
+
+
+}
+
+.btn-outline-secondary {
+    color: rgb(var(--color-accent)) !important;
+    border-color: rgb(var(--color-accent)) !important;
+}
+
+/*  
+    Solutions from: 
+    https://www.tutorialrepublic.com/faq/how-to-change-bootstrap-default-input-focus-glow-style.php
+    https://stackoverflow.com/questions/14820952/change-bootstrap-input-focus-blue-glow
+    Post from:  answered Jan 5 '15 at 11:40 igaster
+    
+    focus shadow shows best on navbar search form when set to opacity 1.0 (100%). too light otherwise.
+
+*/
+.form-control:focus {
+    border-color: rgb(var(--color-accent));
+    /* box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, 0.075) inset, var(--focus-shadow-accent-light-50); */
+    box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, 0.075) inset, var(--focus-shadow-accent-100);
+}
+
+/**
+ * =============================================
+ * =            CSS GRID LAYOUT                =
+ * =============================================
+ *
+ */
+.body-grid-container {
+
+    display: grid;
+    grid-template-areas:
+        "sidenav-area header-area"
+        "sidenav-area main-area"
+    ;
+
+    grid-template-columns: auto 1fr;
+    grid-template-rows:
+        auto 1fr;
+
+    /* to keep scrolling only on main/child content, this has to have a maximum height */
+    min-height: 100vh;
+    max-height: 100vh;
+    max-width: 100vw;
+
+}
+
+.header-container {
+    grid-area: header-area;
+    background-color: rgba(var(--color-primary-dark));
+    box-shadow: var(--shadow-top-neutral-dark-50);
+}
+
+.sidenav-container {
+    grid-area: sidenav-area;
+    background-color: rgba(var(--color-primary-dark));
+    box-shadow: var(--shadow-neutral-dark-50);
+}
+
+
+.main-container {
+    grid-area: main-area;
+
+}
+
+/**
+ * =============================================
+ * =            NAV                            =
+ * =============================================
+ *
+ */
+ 
+.navbar-brand {
+    color: rgb(var(--color-neutral-light)) !important;    
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.navbar-text {
+    color: rgb(var(--color-neutral-light)) !important;
+}
+
+.nav-link {
+    color: rgb(var(--color-neutral-light)) !important;
+}
+
+.fa-search {
+    color: rgb(var(--color-accent));
+}
+
+.fa-bars {
+    color: rgb(var(--color-primary));
+}
+
+/* 
+    Solution from:
+    https://stackoverflow.com/questions/59067406/bootstrap-navbar-with-desired-width-and-centralized
+
+    Used id so doesn't affect other forms
+*/
+#search-form {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* form div.input-group { */
+#search-form div.input-group {
+    width: 100% !important;
+}
+
+
+/* 
+    don't try to integrate the search form media query into other queries.
+    may end up hiding the sidenav
+*/
+@media screen and (max-width: 992px) {
+
+    /* form { */
+    #search-form {
+        width: 100%;
+    }
+
+    .nav-div {
+        max-width: 80%;
+    }
+}
+
+
+/**
+ * =============================================
+ * =            SIDENAV                        =
+ * =============================================
+ *
+ */
+
+.sidenav-container .nav-item {
+    text-align: center;
+}
+
+.sidenav-brand-link-text {
+    font-size: 1.5rem;
+    color: rgb(var(--color-accent-light));
+}
+
+.sidenav-link-text {
+    color: rgb(var(--color-accent-light));
+}
+
+
+.fa-funnel-dollar {
+    color: rgb(var(--color-neutral-light));
+}
+
+.fa-sidenav {
+    font-size: 1.25rem !important;
+    color: rgb(var(--color-neutral-light));
+
+}
+
+@media screen and (max-width: 1199px) {
+    .sidenav-link-text {
+        font-size: 0.5rem;
+    }
+
+    .sidenav-brand-link-text {
+        font-size: 1rem;
+    }
+}
+
+/**
+ * =============================================
+ * =           MAIN BOOTSTRAP CARDS            =
+ * =============================================
+ *
+ */
+
+@media screen and (max-width: 575px) {
+
+    .card {
+        max-width: 75vw;
+    }
+}
+
+/* 
+    NOTE: vw unit coverage is questionable
+    See 1st result https://caniuse.com/#search=vw
+    Using vw units on card width was causing horizontal scrolling on small viewports.
+*/
+.card-deck .card {
+    margin-left: 5px;
+    margin-right: 5px;
+
+}
+
+.card {
+    box-shadow: var(--shadow-neutral-dark-25);
+}
+
+.card-area-chart .card-body {
+    min-width: 25%;
+    height: 45vh;
+}
+
+.card-bar-chart .card-body {
+    min-width: 25%;
+    height: 45vh;
+}
+
+.card-pie-chart .card-body {
+    min-width: 25%;
+    height: 45vh;
+}
+
+.card-datatable {
+    min-width: 75%;
+    height: 40vh;
+    
+}
+
+/**
+ * =============================================
+ * =            APEX CHARTS                    =
+ * =============================================
+ *
+ */
+
+.apexcharts-title-text, 
+.apexcharts-yaxis-title-text,
+.apexcharts-xaxis-title-text {
+    fill: rgba(var(--color-primary-dark));
+}
+
+.apexcharts-yaxis-title-text {
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+.apexcharts-xaxis-title-text {
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+/**
+ * =============================================
+ * =            MODERN TABLE                   =
+ * =============================================
+ *
+ */
+.mt-thead-style {
+    color: rgb(var(--color-neutral-light));
+    background-color: rgba(var(--color-primary-dark));
+}
+
+.mt-caption {
+    color: rgba(var(--color-primary-dark));
+}

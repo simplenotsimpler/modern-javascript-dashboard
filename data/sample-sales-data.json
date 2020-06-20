@@ -1,0 +1,181 @@
+[{
+        "id": 1,
+        "rpt_date": "2018-08-01",
+        "new_customers": 147,
+        "revenue": 27038,
+        "cogs": 9833,
+        "profit": 17205,
+        "profit_margin": 0.636327
+    },
+    {
+        "id": 2,
+        "rpt_date": "2018-09-01",
+        "new_customers": 117,
+        "revenue": 53082,
+        "cogs": 4113,
+        "profit": 48969,
+        "profit_margin": 0.922516
+    },
+    {
+        "id": 3,
+        "rpt_date": "2018-10-01",
+        "new_customers": 121,
+        "revenue": 55320,
+        "cogs": 4504,
+        "profit": 50816,
+        "profit_margin": 0.918583
+    },
+    {
+        "id": 4,
+        "rpt_date": "2018-11-01",
+        "new_customers": 67,
+        "revenue": 63578,
+        "cogs": 8931,
+        "profit": 54647,
+        "profit_margin": 0.859527
+    },
+    {
+        "id": 5,
+        "rpt_date": "2018-12-01",
+        "new_customers": 184,
+        "revenue": 50564,
+        "cogs": 4025,
+        "profit": 46539,
+        "profit_margin": 0.920398
+    },
+    {
+        "id": 6,
+        "rpt_date": "2019-01-01",
+        "new_customers": 129,
+        "revenue": 16757,
+        "cogs": 7016,
+        "profit": 9741,
+        "profit_margin": 0.581309
+    },
+    {
+        "id": 7,
+        "rpt_date": "2019-02-01",
+        "new_customers": 55,
+        "revenue": 19313,
+        "cogs": 6333,
+        "profit": 12980,
+        "profit_margin": 0.672086
+    },
+    {
+        "id": 8,
+        "rpt_date": "2019-03-01",
+        "new_customers": 32,
+        "revenue": 63626,
+        "cogs": 9745,
+        "profit": 53881,
+        "profit_margin": 0.846839
+    },
+    {
+        "id": 9,
+        "rpt_date": "2019-04-01",
+        "new_customers": 133,
+        "revenue": 33636,
+        "cogs": 7174,
+        "profit": 26462,
+        "profit_margin": 0.786717
+    },
+    {
+        "id": 10,
+        "rpt_date": "2019-05-01",
+        "new_customers": 171,
+        "revenue": 22181,
+        "cogs": 9918,
+        "profit": 12263,
+        "profit_margin": 0.552861
+    },
+    {
+        "id": 11,
+        "rpt_date": "2019-06-01",
+        "new_customers": 92,
+        "revenue": 74702,
+        "cogs": 9241,
+        "profit": 65461,
+        "profit_margin": 0.876295
+    },
+    {
+        "id": 12,
+        "rpt_date": "2019-07-01",
+        "new_customers": 50,
+        "revenue": 11223,
+        "cogs": 8354,
+        "profit": 2869,
+        "profit_margin": 0.255636
+    },
+    {
+        "id": 13,
+        "rpt_date": "2019-08-01",
+        "new_customers": 198,
+        "revenue": 10242,
+        "cogs": 6604,
+        "profit": 3638,
+        "profit_margin": 0.355204
+    },
+    {
+        "id": 14,
+        "rpt_date": "2019-09-01",
+        "new_customers": 78,
+        "revenue": 65196,
+        "cogs": 8328,
+        "profit": 56868,
+        "profit_margin": 0.872262
+    },
+    {
+        "id": 15,
+        "rpt_date": "2019-10-01",
+        "new_customers": 123,
+        "revenue": 62970,
+        "cogs": 8348,
+        "profit": 54622,
+        "profit_margin": 0.867429
+    },
+    {
+        "id": 16,
+        "rpt_date": "2019-11-01",
+        "new_customers": 66,
+        "revenue": 16598,
+        "cogs": 5472,
+        "profit": 11126,
+        "profit_margin": 0.670322
+    },
+    {
+        "id": 17,
+        "rpt_date": "2019-12-01",
+        "new_customers": 39,
+        "revenue": 49865,
+        "cogs": 9166,
+        "profit": 40699,
+        "profit_margin": 0.816184
+    },
+    {
+        "id": 18,
+        "rpt_date": "2020-01-01",
+        "new_customers": 177,
+        "revenue": 69310,
+        "cogs": 9456,
+        "profit": 59854,
+        "profit_margin": 0.863569
+    },
+    {
+        "id": 19,
+        "rpt_date": "2020-02-01",
+        "new_customers": 40,
+        "revenue": 27103,
+        "cogs": 8825,
+        "profit": 18278,
+        "profit_margin": 0.67439
+    },
+    {
+        "id": 20,
+        "rpt_date": "2020-03-01",
+        "new_customers": 31,
+        "revenue": 15954,
+        "cogs": 6324,
+        "profit": 9630,
+        "profit_margin": 0.60361
+    }
+]
