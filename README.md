@@ -36,3 +36,6 @@ Download or clone from [modern-javascript-dashboard](https://github.com/simpleno
   * amCharts 4 is accessible out of the box (see https://www.amcharts.com/accessibility/accessible-charts/). 
 * Full accessibility - need help.
 * Individual pages.
+
+# License
+This project is [MIT licensed](./LICENSE).
