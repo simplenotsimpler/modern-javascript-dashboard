@@ -1,7 +1,7 @@
 # Modern JavaScript Dashboard
 Sample themable JavaScript dashboard template that employs modern ES6, Bootstrap 4 and CSS grid. 
 
-Current theme [Microsoft Power BI Color Blind Friendly](https://community.powerbi.com/t5/Themes-Gallery/Color-Blind-Friendly/td-p/140597). 
+Current theme: [Microsoft Power BI Color Blind Friendly](https://community.powerbi.com/t5/Themes-Gallery/Color-Blind-Friendly/td-p/140597). 
 
 # Notes:
 * __*Only*__ targets **modern** browsers. 
