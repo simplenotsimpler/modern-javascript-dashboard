@@ -21,7 +21,9 @@ Current theme [Microsoft Power BI Color Blind Friendly](https://community.powerb
 Download or clone from [modern-javascript-dashboard](https://github.com/simplenotsimpler/modern-javascript-dashboard).
 
 ## Requires:
-* [Bootstrap 4.4.1](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
+* Bootstrap - either of the versions below:
+  * [Bootstrap 4.4.1](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
+  * [Bootstrap 4.5.3](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
 * [Apex Charts](https://github.com/apexcharts/apexcharts.js)
 * [ModernTable Library](https://github.com/simplenotsimpler/modern-table)
 * JSON data source
