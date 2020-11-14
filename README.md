@@ -5,10 +5,11 @@ Current theme [Microsoft Power BI Color Blind Friendly](https://community.powerb
 
 # Notes:
 * __*Only*__ targets **modern** browsers. 
-* This template is ___NOT___  compatible with IE. This is intentional...how can we help Microsoft kill IE if we keep making stuff that works with it?
-* Tested with Bootstrap 4.4.1 CSS framework.
-* This has __*NOT*__ been tested with other CSS frameworks.
-* If the proper library for number or date formatting does not load, this gracefully fails to no formatting.
+* To help [Microsoft phase out IE11](https://techcommunity.microsoft.com/t5/microsoft-365-blog/microsoft-365-apps-say-farewell-to-internet-explorer-11-and/ba-p/1591666) and in anticipation of [Bootstrap 5 dropping IE support](https://blog.getbootstrap.com/2020/06/16/bootstrap-5-alpha/), IE is not supported.
+* Compatible with Bootstrap 4.4.1 and higher.
+* Specifically tested with Bootstrap 4.4.1 and 4.5.3.
+* Theoretically, this should work with other CSS frameworks. However, this has __*NOT*__ been tested with other CSS frameworks, so your mileage may vary.
+* If number or date formatting are specified in the configuration, but the proper library does not load, this gracefully fails to no formatting.
 * Strongly recommended to use ISO 8601 date formats in your source data and configuration. Then use the UI for localization.
 * Accessibility: Minimal level (Level A ??).
 * Site search intentionally left non-functional since developers will likely want to use their own tool, e.g. Elasticsearch, etc.
