@@ -30,12 +30,5 @@ Download or clone from [modern-javascript-dashboard](https://github.com/simpleno
 * Number formatting: [format-intl-number library](https://github.com/simplenotsimpler/format-intl-number)
 * Date formatting: [Moment.js](https://momentjs.com/)
 
-# Future enhancements
-* amCharts:
-  * Apex Charts requires JSON in their format (see https://apexcharts.com/docs/update-charts-from-json-api-ajax/), whereas amCharts 4 allows you to use your own format (see https://www.amcharts.com/docs/v4/concepts/data/loading-external-data/).
-  * amCharts 4 is accessible out of the box (see https://www.amcharts.com/accessibility/accessible-charts/). 
-* Full accessibility - need help.
-* Individual pages.
-
 # License
 This project is [MIT licensed](./LICENSE).
